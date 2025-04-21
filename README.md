@@ -11,9 +11,13 @@ Information related to demographics, education, experience are in hands from can
 As enrollies are submitting their request to join the course via Google Forms, we have the Google Sheet that stores data about enrolled students, containing the following columns:
 
 enrollee_id: unique ID of an enrollee
+
 full_name: full name of an enrollee
+
 city: the name of an enrollie's city
+
 gender: gender of an enrollee
+
 The source: https://docs.google.com/spreadsheets/d/1VCkHwBjJGRJ21asd9pxW4_0z2PWuKhbLR3gUHm-p4GI/edit?usp=sharing
 
 ### 2. Enrollies' education
@@ -54,12 +58,19 @@ From LMS system's database you can retrieve a number of training hours for each 
 Database credentials:
 
 Database type: MySQL
+
 Host: 112.213.86.31
+
 Port: 3360
+
 Login: etl_practice
+
 Password: 550814
+
 Database name: company_course
+
 Table name: training_hours
+
 ### 5. City development index
 Another source that can be usefull is the table of City development index.
 
@@ -73,9 +84,15 @@ From LMS database you can also retrieve the fact of employment. If student is ma
 Database credentials:
 
 Database type: MySQL
+
 Host: 112.213.86.31
+
 Port: 3360
+
 Login: etl_practice
+
 Password: 550814
+
 Database name: company_course
+
 Table name: employment
