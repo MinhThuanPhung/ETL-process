@@ -96,3 +96,10 @@ Password: 550814
 Database name: company_course
 
 Table name: employment
+
+## ETL Process
+### 1. Extrack
+
+### 2. Transform
+### 3. Load
+
