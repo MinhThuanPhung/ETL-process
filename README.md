@@ -99,7 +99,31 @@ Table name: employment
 
 ## ETL Process
 ### 1. Extrack
-
+- Read data from different sourses: CSV, Google sheet, webpage and LMS system database
 ### 2. Transform
+1.  enrollies_data
+  - Fill NA value by mode for each column
+  - Convert datatype from object to string
+2.  enrollies_education
+  - Fill NA value by Unkown
+  - capitalize all characters for major_discipline column
+  - replace _ in enrolled_university colunm by space
+  - capitalize the first character in errolled_university column
+  - Convert datatype from object to string
+3.  enrollies_working_experience
+  - Fill NA value by mode for each column
+  - Convert datatype from object to string
+4.  city_development_index
+  - Convert datatype from object to string
 ### 3. Load
 
+- create engine for database name "errollee_datawarehouse"
+  
+db_name = "errollee_datawarehouse.db"
+engine = create_engine(f'sqlite:///{db_name}')
+enrollies_data.to_sql('enrollies_data', engine, if_exists='replace')
+enrollies_working_experience.to_sql('enrollies_working_experience', engine, if_exists='replace')
+training_hours.to_sql('training_hours', engine, if_exists='replace')
+enrollies_education.to_sql('enrollies_education', engine, if_exists='replace')
+city_development_index.to_sql('city_development_index', engine, if_exists='replace')
+employment.to_sql('employment', engine, if_exists='replace')
