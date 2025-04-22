@@ -120,10 +120,17 @@ Table name: employment
 - create engine for database name "errollee_datawarehouse"
   
 db_name = "errollee_datawarehouse.db"
+
 engine = create_engine(f'sqlite:///{db_name}')
+
 enrollies_data.to_sql('enrollies_data', engine, if_exists='replace')
+
 enrollies_working_experience.to_sql('enrollies_working_experience', engine, if_exists='replace')
+
 training_hours.to_sql('training_hours', engine, if_exists='replace')
+
 enrollies_education.to_sql('enrollies_education', engine, if_exists='replace')
+
 city_development_index.to_sql('city_development_index', engine, if_exists='replace')
+
 employment.to_sql('employment', engine, if_exists='replace')
